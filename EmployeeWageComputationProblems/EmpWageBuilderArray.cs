@@ -59,5 +59,6 @@ namespace EmployeeWageComputationProblems
             return totalEmployeeHour * companyEmpWage.empRatePerHour;
         }
     }
-}
+}    
+
 
