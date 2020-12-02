@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EmployeeWageComputationProblems
 {
-    class EmpWageBuilderArray
+    class EmpWageBuilderArray:IComputeEmpWage
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
@@ -24,7 +24,7 @@ namespace EmployeeWageComputationProblems
 
         public void computeEmpWage()
         {
-            for(int i = 0; i < numOfCompany; i++)
+            for (int i = 0; i < numOfCompany; i++)
             {
                 companyEmpWageArray[i].setTotalEmpWage(this.computeEmpWage(this.companyEmpWageArray[i]));
                 Console.WriteLine(this.companyEmpWageArray[i].toString());
@@ -57,6 +57,8 @@ namespace EmployeeWageComputationProblems
                 Console.WriteLine("Day=" + totalWorkingDays + " Emplyee hours=" + empHrs);
             }
             return totalEmployeeHour * companyEmpWage.empRatePerHour;
-           }
+        }
     }
-}
+}    
+
+
