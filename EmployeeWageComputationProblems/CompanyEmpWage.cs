@@ -11,6 +11,8 @@ namespace EmployeeWageComputationProblems
         public int numOfWorkingDays;
         public int maxHoursPerMonth;
         public int totalEmpWages;
+        public int dailyWage;
+        public int totalWageAlongWithDailyWage;
 
         public CompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {

@@ -59,6 +59,10 @@ namespace EmployeeWageComputationProblems
                 totalEmployeeHour += empHrs;
                 Console.WriteLine("Day=" + totalWorkingDays + " Emplyee hours=" + empHrs);
             }
+            companyEmpWage.dailyWage = empHrs * companyEmpWage.empRatePerHour;
+            Console.WriteLine("Daily employee wages is = " +companyEmpWage.dailyWage);
+            companyEmpWage.totalWageAlongWithDailyWage = totalEmployeeHour * companyEmpWage.empRatePerHour + companyEmpWage.dailyWage;
+            Console.WriteLine("total wage along with daily wage = "+ companyEmpWage.totalWageAlongWithDailyWage);
             return totalEmployeeHour * companyEmpWage.empRatePerHour;
         }
         public int getTotalWage(string company)
