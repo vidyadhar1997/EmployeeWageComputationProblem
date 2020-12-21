@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
 namespace EmployeeWageComputationProblems
 {
     class EmpWageBuilderArray
     {
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
-        
         LinkedList<CompanyEmpWage> companyEmpWageList;
         Dictionary<string, CompanyEmpWage> companyToEmpWageMap;
 
@@ -60,11 +58,12 @@ namespace EmployeeWageComputationProblems
                 Console.WriteLine("Day=" + totalWorkingDays + " Emplyee hours=" + empHrs);
             }
             companyEmpWage.dailyWage = empHrs * companyEmpWage.empRatePerHour;
-            Console.WriteLine("Daily employee wages is = " +companyEmpWage.dailyWage);
+            Console.WriteLine("Daily employee wages is = " + companyEmpWage.dailyWage);
             companyEmpWage.totalWageAlongWithDailyWage = totalEmployeeHour * companyEmpWage.empRatePerHour + companyEmpWage.dailyWage;
             Console.WriteLine("total wage along with daily wage = "+ companyEmpWage.totalWageAlongWithDailyWage);
             return totalEmployeeHour * companyEmpWage.empRatePerHour;
         }
+
         public int getTotalWage(string company)
         {
             return this.companyToEmpWageMap[company].totalEmpWages;
